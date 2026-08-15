@@ -1,4 +1,3 @@
-
 :root {
   --yellow: #f8c335;
   --yellow-soft: #ffe6a0;
@@ -158,33 +157,61 @@ h2 {
   padding: 4rem 1rem 1.4rem;
   border: 8px solid var(--yellow);
   border-radius: 30px;
-  background: linear-gradient(180deg, rgba(255,248,231,.96), rgba(255,245,219,.94));
+  background: linear-gradient(
+    180deg,
+    rgba(255,248,231,.96),
+    rgba(255,245,219,.94)
+  );
   box-shadow: var(--shadow-strong);
   overflow: hidden;
+  isolation: isolate;
 }
-
-.hero::before {
-  content: "";
+.hero__inner-border {
   position: absolute;
   inset: 8px;
+  z-index: 3;
   border: 3px solid var(--teal);
   border-radius: 22px;
   pointer-events: none;
 }
-
 .hero::after {
   content: "";
   position: absolute;
   inset: auto 0 0;
   height: 10px;
-  background: repeating-linear-gradient(90deg, var(--red) 0 34px, var(--teal) 34px 68px, var(--orange) 68px 102px, var(--green) 102px 136px);
+  z-index: 4;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--red) 0 34px,
+    var(--teal) 34px 68px,
+    var(--orange) 68px 102px,
+    var(--green) 102px 136px
+  );
 }
-
+.hero__bg-image {
+  position: absolute;
+  inset: -14px;
+  z-index: 0;
+  background:
+    linear-gradient(
+      rgba(255, 248, 231, 0.62),
+      rgba(255, 245, 219, 0.78)
+    ),
+    url("../assets/images/8a516e6e-fb42-40e2-b344-b9810577bef0.png") center / cover no-repeat;
+  filter: blur(3px);
+  transform: scale(1.04);
+  opacity: 0.78;
+  pointer-events: none;
+}
+.hero__copy {
+  position: relative;
+  z-index: 5;
+}
 .papel {
   position: absolute;
   top: 0;
   left: 50%;
-  z-index: 2;
+  z-index: 5;
   display: flex;
   gap: .25rem;
   transform: translateX(-50%);
@@ -324,7 +351,7 @@ h2 {
   background-image: var(--card-image);
   background-size: cover;
   background-position: center;
-  ilter: blur(3px) saturate(1.05);
+  filter: blur(3px) saturate(1.05);
   transform: scale(1.12);
 }
 .count-card__veil {
