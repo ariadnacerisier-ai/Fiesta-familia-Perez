@@ -60,8 +60,7 @@ body::before {
   position: fixed;
   inset: 0;
   z-index: -4;
-  background:
-    linear-gradient(180deg, rgba(255,248,231,.35), rgba(248,195,53,.18));
+  background: linear-gradient(180deg, rgba(255,248,231,.35), rgba(248,195,53,.18));
   opacity: .45;
   pointer-events: none;
 }
@@ -95,15 +94,21 @@ a { color: inherit; text-decoration: none; }
 }
 
 .container {
-  width: min(100% - 1rem, var(--container));
+  width: 100%;
+  max-width: var(--container);
   margin-inline: auto;
 }
 
 .hero {
   position: relative;
-  width: min(100% - .75rem, 980px);
+  width: min(100% - 18px, 980px);
   margin: .5rem auto 0;
-  padding: .5rem 0 1.1rem;
+  padding: 10px;
+  overflow: hidden;
+  border: 6px solid rgba(255,255,255,.96);
+  border-radius: 34px;
+  background: rgba(255,248,231,.96);
+  box-shadow: var(--shadow-strong);
 }
 
 .hero__poster {
@@ -112,9 +117,8 @@ a { color: inherit; text-decoration: none; }
   margin: 0 auto;
   width: 100%;
   overflow: hidden;
-  border-radius: 28px;
+  border-radius: 24px;
   background: var(--paper);
-  box-shadow: var(--shadow-strong);
 }
 
 .hero__poster img {
@@ -123,31 +127,31 @@ a { color: inherit; text-decoration: none; }
   height: auto;
   object-fit: contain;
   object-position: center;
-  border-radius: 28px;
+  border-radius: 24px;
 }
 
 .hero__actions {
   position: absolute;
   left: 50%;
-  bottom: 7%;
+  bottom: 7.8%;
   z-index: 5;
-  width: min(52%, 250px);
+  width: min(50%, 245px);
   display: grid;
   grid-template-columns: 1fr;
-  gap: .65rem;
+  gap: .58rem;
   transform: translateX(-50%);
 }
 
 .button {
-  min-height: 50px;
+  min-height: 48px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: .75rem 1rem;
+  padding: .68rem .9rem;
   border: 3px solid var(--teal);
   border-radius: 999px;
   font-family: var(--font-serif);
-  font-size: .98rem;
+  font-size: .95rem;
   font-weight: 900;
   line-height: 1.1;
   text-align: center;
@@ -161,22 +165,24 @@ a { color: inherit; text-decoration: none; }
 
 .section {
   position: relative;
-  padding: 3.4rem 0;
+  padding: 1.6rem 0;
 }
 
-.section::before {
-  content: "";
-  position: absolute;
-  inset: .75rem;
-  z-index: -1;
-  pointer-events: none;
-  border: 2px solid rgba(255,255,255,.56);
-  border-radius: 28px;
+.section::before { display: none; }
+
+.section .container {
+  width: min(100% - 18px, var(--container));
+  padding: clamp(1rem, 4vw, 1.7rem);
+  overflow: hidden;
+  border: 6px solid rgba(255,255,255,.96);
+  border-radius: 34px;
+  background: rgba(255,248,231,.96);
+  box-shadow: var(--shadow-strong);
 }
 
 .section-header {
   width: min(100%, 760px);
-  margin: 0 auto 1.7rem;
+  margin: 0 auto 1.35rem;
   text-align: center;
 }
 
@@ -185,7 +191,7 @@ h1, h2, p { margin: 0; }
 h2 {
   color: var(--teal);
   font-family: var(--font-display);
-  font-size: clamp(2rem, 9vw, 4.4rem);
+  font-size: clamp(1.85rem, 8.5vw, 4.1rem);
   line-height: .95;
   text-transform: uppercase;
   text-shadow: 0 3px 0 rgba(255,255,255,.42);
@@ -203,6 +209,7 @@ h2 {
 .details-grid,
 .menu-grid,
 .confirm-grid {
+  width: 100%;
   display: grid;
   gap: 1rem;
 }
@@ -211,6 +218,8 @@ h2 {
 
 .count-card {
   position: relative;
+  width: 100%;
+  min-width: 0;
   min-height: 190px;
   display: grid;
   align-content: center;
@@ -238,10 +247,10 @@ h2 {
   filter: blur(3px) saturate(1.05);
   transform: scale(1.08);
 }
-.count-card--corazon::before { background-image: url("/Fiesta-familia-Perez/assets/images/bg-corazon.webp?v=10"); }
-.count-card--luna::before { background-image: url("/Fiesta-familia-Perez/assets/images/bg-luna.webp?v=10"); }
-.count-card--gallo::before { background-image: url("/Fiesta-familia-Perez/assets/images/bg-gallo.webp?v=10"); }
-.count-card--mano::before { background-image: url("/Fiesta-familia-Perez/assets/images/bg-mano.webp?v=10"); }
+.count-card--corazon::before { background-image: url("/Fiesta-familia-Perez/assets/images/bg-corazon.webp?v=11"); }
+.count-card--luna::before { background-image: url("/Fiesta-familia-Perez/assets/images/bg-luna.webp?v=11"); }
+.count-card--gallo::before { background-image: url("/Fiesta-familia-Perez/assets/images/bg-gallo.webp?v=11"); }
+.count-card--mano::before { background-image: url("/Fiesta-familia-Perez/assets/images/bg-mano.webp?v=11"); }
 
 .count-card__veil {
   position: absolute;
@@ -272,11 +281,13 @@ h2 {
   text-shadow: 0 2px 0 rgba(255,255,255,.60);
 }
 
-.image-link { display: block; }
+.image-link { display: block; min-width: 0; }
 
 .image-block {
+  width: 100%;
+  min-width: 0;
   margin: 0;
-  overflow: visible;
+  overflow: hidden;
   border-radius: 24px;
   background: transparent;
   box-shadow: var(--shadow-card);
@@ -345,7 +356,7 @@ h2 {
 .stagger.visible > *:nth-child(4) { transition-delay: .18s; }
 
 @media (min-width: 700px) {
-  .section { padding: 4.2rem 0; }
+  .section { padding: 2rem 0; }
   .details-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .menu-grid,
   .confirm-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -360,21 +371,27 @@ h2 {
 }
 
 @media (max-width: 768px) {
-  .container { width: min(100% - .75rem, var(--mobile-max)); }
-  .hero { width: min(100% - .75rem, var(--mobile-max)); padding: .4rem 0 .95rem; }
-  .hero__poster { border-radius: 24px; }
-  .hero__poster img { border-radius: 24px; }
-  .hero__actions { bottom: 5.6%; width: min(56%, 214px); gap: .5rem; }
-  .button { min-height: 44px; padding: .62rem .8rem; font-size: .88rem; }
-  .section { padding: 2.9rem 0; }
-  .count-grid { gap: .85rem; }
-  .count-card { min-height: 170px; padding: .85rem .55rem; }
+  .hero { width: min(100% - 16px, var(--mobile-max)); padding: 8px; border-width: 5px; border-radius: 28px; }
+  .hero__poster { border-radius: 21px; }
+  .hero__poster img { border-radius: 21px; }
+  .hero__actions { bottom: 6.3%; width: min(54%, 206px); gap: .45rem; }
+  .button { min-height: 40px; padding: .5rem .62rem; font-size: .78rem; border-width: 2px; box-shadow: 0 4px 0 rgba(0,0,0,.10); }
+  .section { padding: 1.35rem 0; }
+  .section .container { width: min(100% - 16px, var(--mobile-max)); padding: .9rem; border-width: 5px; border-radius: 28px; }
+  .section-header { margin-bottom: 1rem; }
+  .count-grid { gap: .78rem; }
+  .count-card { min-height: 156px; padding: .8rem .5rem; border-width: 5px; border-radius: 20px; box-shadow: 0 0 0 3px var(--teal), var(--shadow-card); }
+  .count-card:nth-child(2) { box-shadow: 0 0 0 3px var(--orange), var(--shadow-card); }
+  .count-card:nth-child(3) { box-shadow: 0 0 0 3px var(--green), var(--shadow-card); }
+  .count-card:nth-child(4) { box-shadow: 0 0 0 3px var(--red), var(--shadow-card); }
+  .image-block { border-radius: 20px; }
+  .image-block img { border-radius: 20px; }
 }
 
 @media (max-width: 390px) {
-  .hero__actions { width: min(58%, 198px); bottom: 5.2%; gap: .45rem; }
-  .button { min-height: 41px; font-size: .82rem; padding: .55rem .65rem; }
-  .count-card { min-height: 158px; }
+  .hero__actions { width: min(56%, 190px); bottom: 5.9%; gap: .4rem; }
+  .button { min-height: 37px; font-size: .74rem; padding: .46rem .58rem; }
+  .count-card { min-height: 148px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
