@@ -1,0 +1,11 @@
+{
+  "missing_local_references": [],
+  "has_clean_hero": true,
+  "old_poster_not_in_hero": true,
+  "payment_not_before_final": true,
+  "whatsapp_number_not_before_final": true,
+  "has_payment_final": true,
+  "has_whatsapp_final": true,
+  "js_has_event_date": true,
+  "file_count": 19
+}
