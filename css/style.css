@@ -324,7 +324,7 @@ h2 {
   background-image: var(--card-image);
   background-size: cover;
   background-position: center;
-  filter: blur(1px) saturate(.05);
+  filter: blur(1px) saturate(.25);
   transform: scale(1.12);
 }
 .count-card__veil {
