@@ -1,0 +1,21 @@
+{
+  "project": "reunion-familiar-loteria-mobile-cambios",
+  "countdown_bg_cards": [
+    "corazon",
+    "luna",
+    "gallo",
+    "mano"
+  ],
+  "detail_tiles": [
+    "fecha",
+    "hora",
+    "lugar",
+    "musica"
+  ],
+  "menu_tiles": [
+    "tamales",
+    "arroz",
+    "carnitas"
+  ],
+  "all_required_files_present": true
+}
