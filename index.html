@@ -17,60 +17,29 @@
   <meta property="og:image" content="assets/images/og-image.jpg">
 
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bree+Serif&family=Inter:wght@400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="css/style.css?v=7">
+  <link rel="stylesheet" href="css/style.css?v=8">
 </head>
 
 <body>
   <a class="skip-link" href="#main">Ir al contenido</a>
-
   <div class="bg-overlay" aria-hidden="true"></div>
   <div class="progress-bar" aria-hidden="true"></div>
 
   <main id="main">
+    <section class="hero" id="inicio" aria-label="Portada de la invitación">
+      <figure class="hero__poster reveal">
+        <img src="assets/images/8a516e6e-fb42-40e2-b344-b9810577bef0.png" alt="Portada de la reunión familiar Pérez Alcántara">
+      </figure>
 
-    <!-- HERO -->
-    <section class="hero" id="inicio">
-      <div class="hero__bg-image" aria-hidden="true"></div>
-      <div class="hero__inner-border" aria-hidden="true"></div>
-
-      <div class="papel" aria-hidden="true">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <div class="hero__copy">
-        <h1 class="hero__title reveal">
-          <span>Reunión Familiar</span>
-          <strong>Familia Pérez Alcántara</strong>
-        </h1>
-
-        <p class="hero__tag reveal">¡La reunión será en noviembre!</p>
-
-        <p class="hero__text reveal">
-          Una tarde de convivencia, comida y música en vivo.
-        </p>
-
-        <div class="hero__actions reveal">
-          <a class="button button--primary" href="#cuenta" data-scroll="#cuenta">
-            Ver detalles
-          </a>
-
-          <a class="button button--secondary" href="#confirmar" data-scroll="#confirmar">
-            Ir a confirmar
-          </a>
-        </div>
+      <div class="hero__actions reveal">
+        <a class="button button--primary" href="#detalles" data-scroll="#detalles">Ver invitación</a>
+        <a class="button button--secondary" href="#confirmar" data-scroll="#confirmar">Confirmar</a>
       </div>
     </section>
 
-    <!-- CUENTA REGRESIVA -->
     <section class="section countdown" id="cuenta">
       <div class="container">
         <header class="section-header reveal">
@@ -106,7 +75,6 @@
       </div>
     </section>
 
-    <!-- DETALLES -->
     <section class="section" id="detalles">
       <div class="container">
         <header class="section-header reveal">
@@ -122,7 +90,7 @@
             <img src="assets/images/detalle-hora.png" alt="Hora: 14:00 hrs">
           </article>
 
-          <a class="image-link" href="https://maps.app.goo.gl/EUbvuCzxeZcXNDqr5" target="_blank" rel="noopener noreferrer">
+          <a class="image-link" href="https://maps.app.goo.gl/EUbvuCzxeZcXNDqr5" target="_blank" rel="noopener noreferrer" aria-label="Abrir ubicación en Google Maps">
             <article class="image-block">
               <img src="assets/images/detalle-lugar.png" alt="Lugar: Salón Santa Mónica, Jesús Carranza esquina Cerrada de Colón">
             </article>
@@ -135,7 +103,6 @@
       </div>
     </section>
 
-    <!-- MENÚ -->
     <section class="section menu" id="menu">
       <div class="container">
         <header class="section-header reveal">
@@ -158,7 +125,6 @@
       </div>
     </section>
 
-    <!-- CONFIRMACIÓN -->
     <section class="section" id="confirmar">
       <div class="container">
         <header class="section-header reveal">
@@ -180,23 +146,9 @@
         </div>
 
         <div class="cta-wrap reveal">
-          <a
-            class="button button--whatsapp"
-            href="https://wa.me/527221821757?text=Hola,%20quiero%20confirmar%20mi%20asistencia%20a%20la%20reuni%C3%B3n%20familiar%20P%C3%A9rez%20Alc%C3%A1ntara.%20Tambi%C3%A9n%20confirmo%20mi%20dep%C3%B3sito%20de%20la%20cuota%20de%20recuperaci%C3%B3n."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Confirmar por WhatsApp
-          </a>
+          <a class="button button--whatsapp" href="https://wa.me/527221821757?text=Hola,%20quiero%20confirmar%20mi%20asistencia%20a%20la%20reuni%C3%B3n%20familiar%20P%C3%A9rez%20Alc%C3%A1ntara.%20Tambi%C3%A9n%20confirmo%20mi%20dep%C3%B3sito%20de%20la%20cuota%20de%20recuperaci%C3%B3n." target="_blank" rel="noopener noreferrer">Confirmar por WhatsApp</a>
 
-          <a
-            class="button button--secondary"
-            href="https://www.google.com/maps/place/C.+Jes%C3%BAs+Carranza+806,+Delegaci%C3%B3n+Capultitl%C3%A1n,+50263+Capultitl%C3%A1n,+M%C3%A9x./data=!4m6!3m5!1s0x85cd890db83a66a1:0xea56f615cb522f0b!7e2!8m2!3d19.2552028!4d-99.6604649"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Abrir ubicación
-          </a>
+          <a class="button button--secondary" href="https://www.google.com/maps/place/C.+Jes%C3%BAs+Carranza+806,+Delegaci%C3%B3n+Capultitl%C3%A1n,+50263+Capultitl%C3%A1n,+M%C3%A9x./data=!4m6!3m5!1s0x85cd890db83a66a1:0xea56f615cb522f0b!7e2!8m2!3d19.2552028!4d-99.6604649" target="_blank" rel="noopener noreferrer">Abrir ubicación</a>
         </div>
 
         <div class="closing reveal">
@@ -204,13 +156,12 @@
         </div>
       </div>
     </section>
-
   </main>
 
   <footer class="footer">
     <p>Reunión Familiar Pérez Alcántara 2026</p>
   </footer>
 
-  <script src="js/app.js?v=7"></script>
+  <script src="js/app.js?v=8"></script>
 </body>
 </html>
