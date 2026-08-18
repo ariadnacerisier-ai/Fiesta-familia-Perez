@@ -1,0 +1,53 @@
+/* Fixes de visibilidad para GitHub Pages
+   Evita que la portada y las cartas del contador queden ocultas si la animación reveal tarda o no se ejecuta. */
+
+.hero__poster,
+.hero__poster.reveal,
+.hero__poster.visible {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
+
+.hero__poster img {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.count-grid.stagger > *,
+.count-grid.stagger.visible > * {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+}
+
+.count-card--img::before {
+  opacity: 1 !important;
+  background-size: cover !important;
+  background-position: center !important;
+  filter: blur(3px) saturate(1.05) !important;
+  transform: scale(1.08) !important;
+}
+
+.count-card--corazon::before {
+  background-image: url("/Fiesta-familia-Perez/assets/images/bg-corazon.webp?v=12") !important;
+}
+
+.count-card--luna::before {
+  background-image: url("/Fiesta-familia-Perez/assets/images/bg-luna.webp?v=12") !important;
+}
+
+.count-card--gallo::before {
+  background-image: url("/Fiesta-familia-Perez/assets/images/bg-gallo.webp?v=12") !important;
+}
+
+.count-card--mano::before {
+  background-image: url("/Fiesta-familia-Perez/assets/images/bg-mano.webp?v=12") !important;
+}
+
+.count-card__veil {
+  background: linear-gradient(180deg, rgba(255,248,231,.38), rgba(255,245,219,.52)) !important;
+}
