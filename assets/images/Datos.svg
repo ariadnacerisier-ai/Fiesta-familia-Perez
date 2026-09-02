@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1122 1402" role="img" aria-labelledby="title desc">
+  <title id="title">Datos bancarios</title>
+  <desc id="desc">Banco Banorte, nombre Gonzalo Cruz Pérez, cuenta 4189 1400 1318 0376.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff8e7"/>
+      <stop offset="1" stop-color="#fff0c9"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#745016" flood-opacity="0.16"/>
+    </filter>
+    <style>
+      .display{font-family:'Alfa Slab One','Bree Serif',Georgia,serif;font-weight:900;letter-spacing:.02em;}
+      .serif{font-family:'Bree Serif',Georgia,serif;font-weight:800;}
+      .label{fill:#108a8f;font-size:70px;}
+      .value{fill:#123b47;font-size:62px;}
+      .account{fill:#0b616d;font-size:83px;}
+      .small-dot{fill:#e77a30;}
+      .line{stroke:#e77a30;stroke-width:9;stroke-linecap:round;stroke-dasharray:1 26;}
+      .outline{stroke:#0b616d;stroke-width:10;stroke-linejoin:round;fill:none;}
+      .gold{fill:#f8c335;}
+      .orange{fill:#e77a30;}.teal{fill:#108a8f;}.red{fill:#d14437;}.green{fill:#529c53;}.pink{fill:#ef5d8f;}
+    </style>
+  </defs>
+
+  <rect x="34" y="34" width="1054" height="1334" rx="76" fill="#fff" filter="url(#shadow)"/>
+  <rect x="55" y="55" width="1012" height="1292" rx="58" fill="url(#paper)" stroke="#f8c335" stroke-width="20"/>
+  <rect x="84" y="84" width="954" height="1234" rx="42" fill="none" stroke="#e6a11f" stroke-width="8" stroke-dasharray="2 24" stroke-linecap="round"/>
+
+  <!-- Flores decorativas superiores -->
+  <g transform="translate(100 110)">
+    <circle class="gold" cx="0" cy="0" r="12"/><ellipse class="green" cx="0" cy="-28" rx="13" ry="28"/><ellipse class="orange" cx="27" cy="0" rx="13" ry="28" transform="rotate(90 27 0)"/><ellipse class="pink" cx="0" cy="28" rx="13" ry="28"/><ellipse class="teal" cx="-27" cy="0" rx="13" ry="28" transform="rotate(90 -27 0)"/>
+  </g>
+  <g transform="translate(1022 110)">
+    <circle class="gold" cx="0" cy="0" r="12"/><ellipse class="green" cx="0" cy="-28" rx="13" ry="28"/><ellipse class="orange" cx="27" cy="0" rx="13" ry="28" transform="rotate(90 27 0)"/><ellipse class="pink" cx="0" cy="28" rx="13" ry="28"/><ellipse class="teal" cx="-27" cy="0" rx="13" ry="28" transform="rotate(90 -27 0)"/>
+  </g>
+
+  <!-- Icono banco -->
+  <g transform="translate(211 160)">
+    <path d="M350 0 L690 150 H10 Z" fill="#f3bd56" stroke="#123b47" stroke-width="12"/>
+    <rect x="65" y="150" width="570" height="52" fill="#f9d78a" stroke="#123b47" stroke-width="10"/>
+    <rect x="100" y="202" width="500" height="215" fill="#0b616d" opacity=".88"/>
+    <g fill="#f6d08a" stroke="#123b47" stroke-width="10">
+      <rect x="125" y="190" width="62" height="250" rx="4"/>
+      <rect x="265" y="190" width="62" height="250" rx="4"/>
+      <rect x="405" y="190" width="62" height="250" rx="4"/>
+      <rect x="545" y="190" width="62" height="250" rx="4"/>
+    </g>
+    <path d="M300 417 V295 Q350 245 400 295 V417 Z" fill="#529c53" stroke="#123b47" stroke-width="10"/>
+    <circle cx="350" cy="73" r="29" fill="#f8c335" stroke="#123b47" stroke-width="9"/>
+    <rect x="60" y="440" width="580" height="36" fill="#f6d08a" stroke="#123b47" stroke-width="10"/>
+    <rect x="10" y="476" width="680" height="42" fill="#f6d08a" stroke="#123b47" stroke-width="10"/>
+  </g>
+
+  <!-- Hojas laterales -->
+  <g transform="translate(230 470)">
+    <ellipse class="green" cx="0" cy="0" rx="32" ry="82" transform="rotate(-35)"/>
+    <ellipse class="green" cx="44" cy="-10" rx="28" ry="72" transform="rotate(20)"/>
+  </g>
+  <g transform="translate(892 470)">
+    <ellipse class="green" cx="0" cy="0" rx="32" ry="82" transform="rotate(35)"/>
+    <ellipse class="green" cx="-44" cy="-10" rx="28" ry="72" transform="rotate(-20)"/>
+  </g>
+
+  <!-- Divisor floral -->
+  <g transform="translate(160 650)">
+    <path d="M0 0 C170 70 290 70 400 0 C510 -70 640 -70 800 0" fill="none" stroke="#529c53" stroke-width="14" stroke-linecap="round"/>
+    <circle class="red" cx="400" cy="0" r="34"/><circle class="gold" cx="400" cy="0" r="13"/>
+    <ellipse class="pink" cx="185" cy="18" rx="18" ry="52" transform="rotate(60 185 18)"/>
+    <ellipse class="orange" cx="615" cy="18" rx="18" ry="52" transform="rotate(-60 615 18)"/>
+  </g>
+
+  <line class="line" x1="155" y1="735" x2="967" y2="735"/>
+  <text class="display label" x="135" y="830">BANCO:</text>
+  <text class="serif value" x="510" y="830">Banorte</text>
+
+  <line class="line" x1="155" y1="900" x2="967" y2="900"/>
+  <text class="display label" x="135" y="995">NOMBRE:</text>
+  <text class="serif value" x="505" y="995">Gonzalo Cruz Pérez</text>
+
+  <line class="line" x1="155" y1="1065" x2="967" y2="1065"/>
+  <text class="display label" x="561" y="1160" text-anchor="middle">CUENTA:</text>
+  <text class="display account" x="561" y="1272" text-anchor="middle">4189 1400 1318 0376</text>
+
+  <!-- Decoración inferior -->
+  <g transform="translate(175 1320)">
+    <path d="M0 0 C160 -60 260 -60 380 0 C500 60 640 60 772 0" fill="none" stroke="#529c53" stroke-width="14" stroke-linecap="round"/>
+    <circle class="red" cx="386" cy="0" r="28"/><circle class="gold" cx="386" cy="0" r="12"/>
+    <ellipse class="pink" cx="118" cy="-16" rx="16" ry="44" transform="rotate(65 118 -16)"/>
+    <ellipse class="orange" cx="652" cy="-16" rx="16" ry="44" transform="rotate(-65 652 -16)"/>
+    <circle class="teal" cx="60" cy="0" r="10"/><circle class="teal" cx="712" cy="0" r="10"/>
+  </g>
+</svg>
