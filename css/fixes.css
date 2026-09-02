@@ -6,8 +6,9 @@
   display: grid !important;
   justify-items: center !important;
   align-items: start !important;
-  gap: 1rem !important;
+  gap: 0 !important;
   padding: 1rem .7rem 1.5rem !important;
+  position: relative !important;
 }
 
 .hero__poster,
@@ -36,10 +37,26 @@
 .hero > .hero__actions.visible {
   opacity: 1 !important;
   visibility: visible !important;
-  transform: none !important;
-  position: relative !important;
-  z-index: 6 !important;
-  margin-top: .4rem !important;
+  position: absolute !important;
+  z-index: 9 !important;
+  left: 50% !important;
+  top: 72.5% !important;
+  transform: translate(-50%, -50%) !important;
+  width: min(58%, 340px) !important;
+  max-width: 340px !important;
+  margin: 0 !important;
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  justify-items: stretch !important;
+  gap: .55rem !important;
+}
+
+.hero > .hero__actions .button {
+  width: 100% !important;
+  min-height: 46px !important;
+  padding: 0 .9rem !important;
+  font-size: clamp(.88rem, 3.6vw, 1rem) !important;
+  white-space: nowrap !important;
 }
 
 .count-grid.stagger > *,
@@ -63,19 +80,19 @@
 }
 
 .count-card--corazon::before {
-  background-image: url("/Fiesta-familia-Perez/assets/images/bg-corazon.webp?v=13") !important;
+  background-image: url("/Fiesta-familia-Perez/assets/images/bg-corazon.webp?v=14") !important;
 }
 
 .count-card--luna::before {
-  background-image: url("/Fiesta-familia-Perez/assets/images/bg-luna.webp?v=13") !important;
+  background-image: url("/Fiesta-familia-Perez/assets/images/bg-luna.webp?v=14") !important;
 }
 
 .count-card--gallo::before {
-  background-image: url("/Fiesta-familia-Perez/assets/images/bg-gallo.webp?v=13") !important;
+  background-image: url("/Fiesta-familia-Perez/assets/images/bg-gallo.webp?v=14") !important;
 }
 
 .count-card--mano::before {
-  background-image: url("/Fiesta-familia-Perez/assets/images/bg-mano.webp?v=13") !important;
+  background-image: url("/Fiesta-familia-Perez/assets/images/bg-mano.webp?v=14") !important;
 }
 
 .count-card__veil {
@@ -145,10 +162,32 @@
   letter-spacing: .02em !important;
 }
 
+@media (max-width: 430px) {
+  .hero > .hero__actions,
+  .hero > .hero__actions.reveal,
+  .hero > .hero__actions.visible {
+    top: 72.8% !important;
+    width: min(60%, 300px) !important;
+    gap: .45rem !important;
+  }
+
+  .hero > .hero__actions .button {
+    min-height: 42px !important;
+    font-size: .88rem !important;
+  }
+}
+
 @media (min-width: 980px) {
   .hero__poster,
   .hero__poster.reveal,
   .hero__poster.visible {
     width: min(100%, 720px) !important;
+  }
+
+  .hero > .hero__actions,
+  .hero > .hero__actions.reveal,
+  .hero > .hero__actions.visible {
+    top: 72.5% !important;
+    width: 340px !important;
   }
 }
