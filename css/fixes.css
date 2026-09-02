@@ -1,12 +1,25 @@
 /* Fixes de visibilidad para GitHub Pages
-   Evita que la portada y las cartas del contador queden ocultas si la animación reveal tarda o no se ejecuta. */
+   Refuerza portada, cartas del contador y datos bancarios sin depender de imágenes con texto. */
+
+.hero {
+  min-height: auto !important;
+  display: grid !important;
+  justify-items: center !important;
+  align-items: start !important;
+  gap: 1rem !important;
+  padding: 1rem .7rem 1.5rem !important;
+}
 
 .hero__poster,
 .hero__poster.reveal,
 .hero__poster.visible {
+  width: min(100%, 560px) !important;
+  margin: 0 auto !important;
   opacity: 1 !important;
   visibility: visible !important;
   transform: none !important;
+  position: relative !important;
+  z-index: 5 !important;
 }
 
 .hero__poster img {
@@ -15,6 +28,18 @@
   height: auto !important;
   opacity: 1 !important;
   visibility: visible !important;
+  border-radius: 22px !important;
+}
+
+.hero > .hero__actions,
+.hero > .hero__actions.reveal,
+.hero > .hero__actions.visible {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  position: relative !important;
+  z-index: 6 !important;
+  margin-top: .4rem !important;
 }
 
 .count-grid.stagger > *,
@@ -24,7 +49,12 @@
   transform: none !important;
 }
 
+.count-card--img {
+  background: var(--paper) !important;
+}
+
 .count-card--img::before {
+  z-index: 0 !important;
   opacity: 1 !important;
   background-size: cover !important;
   background-position: center !important;
@@ -33,21 +63,92 @@
 }
 
 .count-card--corazon::before {
-  background-image: url("/Fiesta-familia-Perez/assets/images/bg-corazon.webp?v=12") !important;
+  background-image: url("/Fiesta-familia-Perez/assets/images/bg-corazon.webp?v=13") !important;
 }
 
 .count-card--luna::before {
-  background-image: url("/Fiesta-familia-Perez/assets/images/bg-luna.webp?v=12") !important;
+  background-image: url("/Fiesta-familia-Perez/assets/images/bg-luna.webp?v=13") !important;
 }
 
 .count-card--gallo::before {
-  background-image: url("/Fiesta-familia-Perez/assets/images/bg-gallo.webp?v=12") !important;
+  background-image: url("/Fiesta-familia-Perez/assets/images/bg-gallo.webp?v=13") !important;
 }
 
 .count-card--mano::before {
-  background-image: url("/Fiesta-familia-Perez/assets/images/bg-mano.webp?v=12") !important;
+  background-image: url("/Fiesta-familia-Perez/assets/images/bg-mano.webp?v=13") !important;
 }
 
 .count-card__veil {
+  z-index: 1 !important;
+  pointer-events: none !important;
   background: linear-gradient(180deg, rgba(255,248,231,.38), rgba(255,245,219,.52)) !important;
+}
+
+.count-card__name,
+.count-card strong {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.bank-card {
+  min-height: 100% !important;
+  padding: 1.4rem 1rem !important;
+  border: 7px solid #fff !important;
+  box-shadow: 0 0 0 4px var(--teal), var(--shadow) !important;
+  border-radius: 24px !important;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(231,122,48,.16), transparent 24%),
+    radial-gradient(circle at 88% 12%, rgba(16,138,143,.14), transparent 24%),
+    linear-gradient(180deg, #fff8e7, #fff1cf) !important;
+  text-align: center !important;
+  display: grid !important;
+  gap: .85rem !important;
+  align-content: center !important;
+}
+
+.bank-card__icon {
+  font-size: 3rem !important;
+  line-height: 1 !important;
+  margin-bottom: .2rem !important;
+}
+
+.bank-card__row,
+.bank-card__account {
+  display: grid !important;
+  gap: .2rem !important;
+  padding: .7rem .4rem !important;
+  border-top: 3px dotted rgba(231,122,48,.65) !important;
+}
+
+.bank-card__row strong,
+.bank-card__account strong {
+  color: var(--teal) !important;
+  font-family: var(--font-display) !important;
+  font-size: clamp(1.05rem, 4.8vw, 1.55rem) !important;
+  line-height: 1 !important;
+  text-transform: uppercase !important;
+}
+
+.bank-card__row span {
+  color: var(--ink) !important;
+  font-family: var(--font-serif) !important;
+  font-size: clamp(1rem, 4.3vw, 1.45rem) !important;
+  font-weight: 800 !important;
+  line-height: 1.15 !important;
+}
+
+.bank-card__account span {
+  color: var(--teal-dark) !important;
+  font-family: var(--font-display) !important;
+  font-size: clamp(1.45rem, 7.3vw, 2.25rem) !important;
+  line-height: 1.08 !important;
+  letter-spacing: .02em !important;
+}
+
+@media (min-width: 980px) {
+  .hero__poster,
+  .hero__poster.reveal,
+  .hero__poster.visible {
+    width: min(100%, 720px) !important;
+  }
 }
